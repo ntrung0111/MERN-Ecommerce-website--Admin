@@ -1,0 +1,149 @@
+@import "components/_components.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    margin-top: 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.home {
+    flex: 4;
+}
+
+.homeWidgets {
+    display: flex;
+    margin: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    button {
+        padding: 20px;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &.approved {
+            color: #3bb077;
+            background-color: #e5faf2;
+            border-color: #3bb077;
+        }
+
+        &.declined {
+            color: #d95087;
+            background-color: #fff0f1;
+            border-color: #d95087;
+        }
+
+        &.pending {
+            color: #2a7ade;
+            background-color: #ebf1fe;
+            border-color: #2a7ade;
+        }
+
+        &:hover {
+            background-color: #fff;
+        }
+    }
+}
+
+.MuiDataGrid-cell {
+    &.PENDING {
+        color: #2a7ade;
+        background-color: #ebf1fe;
+        border-color: #2a7ade;
+    }
+
+    &.APPROVED,
+    &.VIEWED {
+        color: #3bb077;
+        background-color: #e5faf2;
+        border-color: #3bb077;
+    }
+
+    &.DECLINED {
+        color: #d95087;
+        background-color: #fff0f1;
+        border-color: #d95087;
+    }
+}
+
+.tooltip {
+    margin: 0px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+    white-space: nowrap;
+
+    .tooltipOrder {
+        padding-top: 5px;
+        color: #8884d8;
+    }
+
+    .tooltipRevenue {
+        color: #82ca9d;
+    }
+}
+
+.datePickerContainer {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+
+    .item {
+        margin-right: 20px;
+    }
+}
+
+.monthTitle {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.viewDetail {
+    button {
+        margin-bottom: 10px;
+        padding: 7px 10px;
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(124, 209, 255);
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
+
+@import "products.scss";
+@import "newProduct.scss";
+@import "productList.scss";
+@import "customerInfoContainer.scss";
+@import "loading.scss";

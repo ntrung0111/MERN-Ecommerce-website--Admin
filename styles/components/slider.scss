@@ -1,0 +1,125 @@
+.slider {    
+    border-left: 1px solid #dadada;
+    border-right: 1px solid #dadada;
+    
+    .slick-slider {
+        width: 92%;
+        max-width: 798px;
+        margin: 28px auto 0;
+        padding: 0 40px;
+
+        .slider-item {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-height: 238px;
+            }
+        }
+
+        // Slick arrows
+        .slick-arrow {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 16px;
+            height: 16px;
+            margin: auto;
+            border-top: solid 1px #101010;
+            border-left: solid 1px #101010;
+            cursor: pointer;
+
+            &.prev {
+                left: 0;
+                transform: rotate(-45deg);
+            }
+
+            &.next {
+                right: 0;
+                transform: rotate(135deg);
+            }
+        }
+    }
+
+    // Slider dots overwrite slick dots
+    .slider-dots {
+        margin-top: 5px;
+        border-top: 1px solid #dadada;
+        border-bottom: 1px solid #dadada;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 880px;
+            margin: 0 auto;
+            padding: 0 0 4px;
+
+            li {
+                height: 80px;
+                width: auto;
+                margin-top: 4px;
+                cursor: pointer;
+
+                &:nth-child(n+2) {
+                    margin-left: 1px;
+                }
+
+                &.is-current {
+                    opacity: 0.75;
+                }
+
+                img {
+                    max-width: 100px;
+                    height: 80px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .slider {
+        .slick-slider {
+            margin: 55px auto 0;
+            padding: 0;
+            width: 77.6vw;
+
+            .slider-item {
+                img {
+                    max-height: 280px;
+                }
+            }
+
+            // Slick arrows
+            .slick-arrow {
+                &.prev {
+                    left: -20px;
+                }
+
+                &.next {
+                    right: -20px;
+                }
+            }
+        }
+
+        // Slider dots overwrite slick dots
+        .slider-dots {
+            margin-top: 20px;
+
+            ul {
+                width: 77.6vw;
+                
+                li {
+                    height: 40px;
+
+                    img {
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
